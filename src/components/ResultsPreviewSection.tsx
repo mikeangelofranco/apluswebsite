@@ -2,14 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ButtonLink } from "@/components/ButtonLink";
 import { SectionConsultationCTA } from "@/components/SectionConsultationCTA";
 import { SectionShell } from "@/components/SectionShell";
 import { resultPreviews } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const AUTO_SWITCH_MS = 3000;
-const SLIDE_TRANSITION_MS = 1600;
 const carouselSlides = [
   resultPreviews[resultPreviews.length - 1],
   ...resultPreviews,
@@ -221,7 +219,7 @@ export function ResultsPreviewSection() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border-t border-[#EEE4DA] px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="border-t border-[#EEE4DA] px-4 py-5 sm:px-6">
             <div className="flex items-center gap-2">
               {resultPreviews.map((result, index) => (
                 <button
@@ -236,19 +234,9 @@ export function ResultsPreviewSection() {
                 />
               ))}
             </div>
-            <div className="flex items-center justify-end gap-4">
-              <ButtonLink href="#contact" variant="secondary">
-                View More Results
-              </ButtonLink>
-            </div>
           </div>
         </div>
       </div>
-
-      <p className="mt-8 max-w-2xl text-sm leading-7 text-[#8C7B6D]">
-        Results vary by patient, anatomy, and treatment plan. Consultation is required
-        to determine suitability and expected outcomes.
-      </p>
       <SectionConsultationCTA message="Discuss your goals privately with our team and learn which treatments are most suitable for your features, skin, and recovery preferences." />
     </SectionShell>
   );

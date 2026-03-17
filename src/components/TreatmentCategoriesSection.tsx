@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ButtonLink } from "@/components/ButtonLink";
 import { SectionConsultationCTA } from "@/components/SectionConsultationCTA";
 import { SectionShell } from "@/components/SectionShell";
 import { treatmentCategories } from "@/lib/data";
@@ -186,7 +185,7 @@ export function TreatmentCategoriesSection() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border-t border-[#EEE4DA] px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="border-t border-[#EEE4DA] px-4 py-5 sm:px-6">
             <div className="flex items-center gap-2">
               {treatmentCategories.map((category, index) => (
                 <button
@@ -200,11 +199,6 @@ export function TreatmentCategoriesSection() {
                   )}
                 />
               ))}
-            </div>
-            <div className="flex items-center justify-end gap-4">
-              <ButtonLink href="#contact" variant="secondary">
-                View All Treatments
-              </ButtonLink>
             </div>
           </div>
         </div>
