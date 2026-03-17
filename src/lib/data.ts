@@ -1,8 +1,8 @@
 export const clinicInfo = {
   name: "A Plus Premium Clinic",
   tag: "Luxury Aesthetic Clinic",
-  phone: "+63 917 555 0148",
-  email: "hello@atelieraesthetica.com",
+  phone: "09999999999",
+  email: "hello@aplusclinic.com",
   address: "The Residences at Aurelia, Makati City, Philippines",
   hours: "Mon - Sat, 9:00 AM - 7:00 PM",
 };

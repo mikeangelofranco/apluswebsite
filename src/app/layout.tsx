@@ -13,7 +13,7 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Atelier Aesthetica | Luxury Clinic",
+  title: "A Plus",
   description:
     "Premium aesthetic clinic landing page with editorial styling, refined treatments, and naturally elegant results.",
 };

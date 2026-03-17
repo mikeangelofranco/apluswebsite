@@ -15,7 +15,7 @@ export function SpecialistsSection() {
           <div className="relative min-h-[520px] lg:min-h-[680px]">
             <Image
               src={specialists.image}
-              alt={specialists.name}
+              alt={specialists.name.join(" and ")}
               fill
               className="object-cover object-top"
               sizes="(min-width: 1024px) 45vw, 100vw"

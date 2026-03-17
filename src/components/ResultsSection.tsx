@@ -1,14 +1,12 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/SectionShell";
 import { resultCategories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function ResultsSection() {
-  const [activeIndex, setActiveIndex] = useState(1);
-  const activeResult = resultCategories[activeIndex];
+  const activeResult =
+    resultCategories.find((category) => category.label === "Cosmetic Surgery") ??
+    resultCategories[0];
 
   return (
     <SectionShell
@@ -19,19 +17,17 @@ export function ResultsSection() {
     >
       <div className="mb-8 flex flex-wrap gap-3">
         {resultCategories.map((category, index) => (
-          <button
+          <div
             key={category.label}
-            type="button"
-            onClick={() => setActiveIndex(index)}
             className={cn(
               "rounded-full border px-5 py-3 text-sm font-semibold tracking-[0.08em] transition",
-              index === activeIndex
+              category.label === activeResult.label
                 ? "border-[#B8863B] bg-[#B8863B] text-white"
-                : "border-[#E8DDD1] bg-white/80 text-[#6F5846] hover:border-[#D4B07A] hover:text-[#9A6B2F]",
+                : "border-[#E8DDD1] bg-white/80 text-[#6F5846]",
             )}
           >
             {category.label}
-          </button>
+          </div>
         ))}
       </div>
       <div className="grid gap-6 xl:grid-cols-[1fr_1fr_0.9fr]">

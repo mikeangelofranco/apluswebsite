@@ -1,0 +1,19 @@
+[Unit]
+Description=A Plus Website Next.js Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/apluswebsite
+Environment=NODE_ENV=production
+Environment=PORT=3006
+Environment=HOSTNAME=127.0.0.1
+Environment=PATH=/srv/apluswebsite/.runtime/node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/srv/apluswebsite/.runtime/node/bin/node /srv/apluswebsite/node_modules/next/dist/bin/next start -H 127.0.0.1 -p 3006
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
