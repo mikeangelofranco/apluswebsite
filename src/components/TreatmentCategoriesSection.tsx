@@ -1,25 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ButtonLink } from "@/components/ButtonLink";
 import { SectionConsultationCTA } from "@/components/SectionConsultationCTA";
 import { SectionShell } from "@/components/SectionShell";
-import { testimonials } from "@/lib/data";
+import { treatmentCategories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const AUTO_SWITCH_MS = 3000;
 const carouselSlides = [
-  testimonials[testimonials.length - 1],
-  ...testimonials,
-  testimonials[0],
+  treatmentCategories[treatmentCategories.length - 1],
+  ...treatmentCategories,
+  treatmentCategories[0],
 ];
 
-export function TestimonialsSection() {
+export function TreatmentCategoriesSection() {
   const [trackIndex, setTrackIndex] = useState(1);
   const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const maxTrackIndex = carouselSlides.length - 1;
 
-  const activeIndex = (trackIndex - 1 + testimonials.length) % testimonials.length;
+  const activeIndex = (trackIndex - 1 + treatmentCategories.length) % treatmentCategories.length;
 
   const moveToPrevious = () => {
     setIsTransitionEnabled(true);
@@ -75,25 +76,28 @@ export function TestimonialsSection() {
       setTrackIndex(1);
     } else if (trackIndex === 0) {
       setIsTransitionEnabled(false);
-      setTrackIndex(testimonials.length);
+      setTrackIndex(treatmentCategories.length);
     }
   };
 
   return (
     <SectionShell
-      title="What Our Patients Say"
-      description="A few of the qualities patients mention most often: discretion, professionalism, a calm environment, and results that never feel overdone."
+      id="treatments"
+      title="Curated treatment categories"
+      description="Explore the clinic's core areas of care through concise treatment groups built to be easy to scan and simple to understand."
     >
       <div className="rounded-[2.3rem] border border-[#E7DDD2] bg-[linear-gradient(135deg,#F8F1E8_0%,#EFE3D6_100%)] p-3 shadow-[0_22px_58px_rgba(58,40,24,0.08)] sm:p-4">
         <div className="overflow-hidden rounded-[1.9rem] border border-[#E7DDD2] bg-[linear-gradient(180deg,#FCF8F3_0%,#F6EEE5_100%)] shadow-[0_18px_48px_rgba(58,40,24,0.06)]">
           <div className="flex items-center justify-between border-b border-[#EEE4DA] px-4 py-4 sm:px-6">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
-              Patient Reviews
-            </p>
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
+                Treatment Categories
+              </p>
+            </div>
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                aria-label="Show previous testimonial"
+                aria-label="Show previous category"
                 onClick={moveToPrevious}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E4D7CA] bg-[#FCF7F1] text-xl text-[#2F281F] transition hover:border-[#B08A56] hover:text-[#8D6B3F]"
               >
@@ -101,7 +105,7 @@ export function TestimonialsSection() {
               </button>
               <button
                 type="button"
-                aria-label="Show next testimonial"
+                aria-label="Show next category"
                 onClick={moveToNext}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E4D7CA] bg-[#FCF7F1] text-xl text-[#2F281F] transition hover:border-[#B08A56] hover:text-[#8D6B3F]"
               >
@@ -111,6 +115,9 @@ export function TestimonialsSection() {
           </div>
 
           <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-12 bg-gradient-to-r from-[#FCF8F3] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-12 bg-gradient-to-l from-[#FCF8F3] to-transparent" />
+
             <div
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
@@ -126,54 +133,54 @@ export function TestimonialsSection() {
               )}
               style={{ transform: `translateX(-${trackIndex * 100}%)` }}
             >
-              {carouselSlides.map((testimonial, index) => {
-                const logicalIndex = (index - 1 + testimonials.length) % testimonials.length;
+              {carouselSlides.map((category, index) => {
+                const logicalIndex =
+                  (index - 1 + treatmentCategories.length) % treatmentCategories.length;
 
                 return (
                   <article
-                    key={`${testimonial.name}-${index}`}
+                    key={`${category.title}-${index}`}
                     className={cn(
                       "min-w-full p-4 sm:p-6 lg:p-8",
                       logicalIndex === activeIndex ? "opacity-100" : "opacity-70",
                       "transition-opacity duration-[1600ms] ease-in-out",
                     )}
                   >
-                    <div className="grid gap-6 lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
-                      <div className="rounded-[1.9rem] border border-[#D8C6B3] bg-[linear-gradient(145deg,#6D523B_0%,#8B694C_48%,#A8835B_100%)] p-6 text-white shadow-[0_18px_45px_rgba(41,28,17,0.16)] sm:p-7">
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#F0D5B1] sm:text-xs sm:tracking-[0.3em]">
-                          5-Star Review
-                        </p>
-                        <div className="mt-7 flex gap-1 text-[#F7E7D1]">
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                          <span>★</span>
-                        </div>
-                        <p className="mt-8 text-[2rem] leading-none text-[#FFF7EE] sm:text-[2.4rem]">
-                          &ldquo;
-                        </p>
-                        <p className="mt-6 text-base leading-8 text-[#FFF1E4] sm:text-lg">
-                          {testimonial.highlight}
-                        </p>
-                      </div>
-
+                    <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
                       <div className="rounded-[1.9rem] border border-[#EAE0D6] bg-[linear-gradient(180deg,#FFFCF8_0%,#F8F1E8_100%)] p-6 sm:p-7">
                         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
-                          Review {String(logicalIndex + 1).padStart(2, "0")}
+                          Category {String(logicalIndex + 1).padStart(2, "0")}
                         </p>
-                        <p className="mt-5 text-lg leading-8 text-[#3F342A] sm:text-[1.35rem]">
-                          &ldquo;{testimonial.quote}&rdquo;
+                        <h3 className="mt-4 text-3xl leading-tight text-[#2F281F] sm:text-4xl">
+                          {category.title}
+                        </h3>
+                        <p className="mt-5 text-base leading-8 text-[#605448] sm:text-lg">
+                          {category.description}
                         </p>
 
-                        <div className="mt-8 rounded-[1.45rem] border border-[#E5D7CA] bg-[rgba(255,250,244,0.82)] px-5 py-5">
-                          <p className="text-base font-semibold text-[#2F281F]">
-                            {testimonial.name}
+                        <div className="mt-8 rounded-[1.5rem] border border-[#E5D7CA] bg-[rgba(255,250,244,0.82)] p-5">
+                          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8C7B6D]">
+                            Treatment Focus
                           </p>
-                          <p className="mt-1 text-xs uppercase tracking-[0.24em] text-[#8C7B6D]">
-                            {testimonial.treatment}
+                          <p className="mt-3 text-sm leading-7 text-[#605448]">
+                            Curated procedures and physician-guided options grouped for easier
+                            treatment discovery.
                           </p>
                         </div>
+                      </div>
+
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {category.treatments.map((treatment) => (
+                          <div
+                            key={treatment}
+                            className="rounded-[1.45rem] border border-[#E7DDD2] bg-[linear-gradient(180deg,#FFFDF9_0%,#F7F0E8_100%)] px-5 py-5 shadow-[0_12px_30px_rgba(58,40,24,0.05)]"
+                          >
+                            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8D6B3F]">
+                              Service
+                            </p>
+                            <p className="mt-3 text-lg leading-7 text-[#2F281F]">{treatment}</p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </article>
@@ -184,11 +191,11 @@ export function TestimonialsSection() {
 
           <div className="flex flex-col gap-4 border-t border-[#EEE4DA] px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-2">
-              {testimonials.map((testimonial, index) => (
+              {treatmentCategories.map((category, index) => (
                 <button
-                  key={testimonial.name}
+                  key={category.title}
                   type="button"
-                  aria-label={`Show testimonial from ${testimonial.name}`}
+                  aria-label={`Show ${category.title}`}
                   onClick={() => moveToIndex(index)}
                   className={cn(
                     "h-2.5 rounded-full transition duration-300",
@@ -197,14 +204,20 @@ export function TestimonialsSection() {
                 />
               ))}
             </div>
-            <p className="text-sm leading-7 text-[#8C7B6D]">
-              Slide {String(activeIndex + 1).padStart(2, "0")} of{" "}
-              {String(testimonials.length).padStart(2, "0")}
-            </p>
+            <div className="flex items-center justify-between gap-4 lg:justify-end">
+              <p className="text-sm leading-7 text-[#8C7B6D]">
+                Slide {String(activeIndex + 1).padStart(2, "0")} of{" "}
+                {String(treatmentCategories.length).padStart(2, "0")}
+              </p>
+              <ButtonLink href="#contact" variant="secondary">
+                View All Treatments
+              </ButtonLink>
+            </div>
           </div>
         </div>
       </div>
-      <SectionConsultationCTA message="Take the next step with a consultation that is calm, discreet, and guided by what will look best for you in real life." />
+
+      <SectionConsultationCTA message="Not sure which category fits your goals? Book a consultation and we will help you narrow the right treatment path with clarity." />
     </SectionShell>
   );
 }

@@ -1,40 +1,28 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { BrandStatement } from "@/components/BrandStatement";
-import { SignatureVisualStrip } from "@/components/SignatureVisualStrip";
-import { FeaturedTreatments } from "@/components/FeaturedTreatments";
+import { BrandPositioningSection } from "@/components/BrandPositioningSection";
+import { TreatmentCategoriesSection } from "@/components/TreatmentCategoriesSection";
 import { SpecialistsSection } from "@/components/SpecialistsSection";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { ResultsSection } from "@/components/ResultsSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
-import { PatientJourney } from "@/components/PatientJourney";
+import { ResultsPreviewSection } from "@/components/ResultsPreviewSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { ServicesDirectory } from "@/components/ServicesDirectory";
-import { FoundersStory } from "@/components/FoundersStory";
-import { FAQSection } from "@/components/FAQSection";
-import { CTASection } from "@/components/CTASection";
+import { BranchesSection } from "@/components/BranchesSection";
+import { FinalCTASection } from "@/components/FinalCTASection";
 import { Footer } from "@/components/Footer";
 import { WhiteCanvas } from "@/components/WhiteCanvas";
 
 export default function HomePage() {
   return (
-    <main className="px-4 py-4 md:px-8 md:py-8 lg:px-10">
+    <main className="overflow-x-clip px-2 py-2 sm:px-4 sm:py-4 lg:px-5 lg:py-5">
       <WhiteCanvas>
         <Header />
         <HeroSection />
-        <BrandStatement />
-        <SignatureVisualStrip />
-        <FeaturedTreatments />
+        <BrandPositioningSection />
+        <TreatmentCategoriesSection />
         <SpecialistsSection />
-        <WhyChooseUs />
-        <ResultsSection />
-        <ExperienceSection />
-        <PatientJourney />
+        <ResultsPreviewSection />
         <TestimonialsSection />
-        <ServicesDirectory />
-        <FoundersStory />
-        <FAQSection />
-        <CTASection />
+        <BranchesSection />
+        <FinalCTASection />
         <Footer />
       </WhiteCanvas>
     </main>

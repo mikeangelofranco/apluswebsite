@@ -13,9 +13,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "A Plus",
+  title: "A Plus Premium Clinic",
   description:
-    "Premium aesthetic clinic landing page with editorial styling, refined treatments, and naturally elegant results.",
+    "Premium medical aesthetics and cosmetic surgery clinic with refined treatments, specialist care, and a luxury patient experience.",
 };
 
 export default function RootLayout({

@@ -38,7 +38,7 @@ export function SignatureVisualStrip() {
               visible results and lasting confidence.
             </p>
           </div>
-          <ButtonLink href="#results" variant="secondary" className="mt-8 w-fit">
+          <ButtonLink href="#treatments" variant="secondary" className="mt-8 w-fit">
             Learn More
           </ButtonLink>
         </div>

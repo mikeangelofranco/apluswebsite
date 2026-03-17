@@ -1,5 +1,6 @@
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionShell } from "@/components/SectionShell";
+import { consultationLink } from "@/lib/data";
 
 export function CTASection() {
   return (
@@ -15,7 +16,7 @@ export function CTASection() {
           Book a consultation and let our specialists create a treatment plan tailored to your goals.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <ButtonLink href="#contact">Book Consultation</ButtonLink>
+          <ButtonLink href={consultationLink}>Book Consultation</ButtonLink>
           <ButtonLink href="mailto:hello@atelieraesthetica.com" variant="secondary">
             Contact Our Team
           </ButtonLink>
