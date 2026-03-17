@@ -147,7 +147,15 @@ export const specialistsTeam = [
   },
 ] as const;
 
-export const resultPreviews = [
+type ResultPreview = {
+  title: string;
+  description: string;
+  beforeImage: string;
+  afterImage: string;
+  imageFit?: "contain";
+};
+
+export const resultPreviews: readonly ResultPreview[] = [
   {
     title: "Facial Rejuvenation",
     description: "Softer, brighter definition through carefully balanced enhancement.",

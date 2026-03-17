@@ -193,14 +193,9 @@ export function WhyChooseUsSection() {
                           <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#F2DAB7] sm:text-xs sm:tracking-[0.3em]">
                             {visual.eyebrow}
                           </p>
-                          <div className="mt-6 flex items-center gap-4">
-                            <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#E8CBA4]/20 bg-[#3C2D21]/28 text-lg font-semibold">
-                              {String(logicalIndex + 1).padStart(2, "0")}
-                            </div>
-                            <p className="text-lg font-medium leading-7 text-[#FFF7EE]">
-                              {visual.accent}
-                            </p>
-                          </div>
+                          <p className="mt-6 text-lg font-medium leading-7 text-[#FFF7EE]">
+                            {visual.accent}
+                          </p>
                           <div className="mt-8 flex flex-wrap gap-2">
                             {visual.badges.map((badge) => (
                               <span
@@ -215,10 +210,7 @@ export function WhyChooseUsSection() {
                       </div>
 
                       <div className="rounded-[1.9rem] border border-[#EAE0D6] bg-[linear-gradient(180deg,#FFFCF8_0%,#F8F1E8_100%)] p-6 sm:p-7">
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
-                          Point {String(logicalIndex + 1).padStart(2, "0")}
-                        </p>
-                        <h3 className="mt-4 text-3xl leading-tight text-[#2F281F] sm:text-4xl">
+                        <h3 className="text-3xl leading-tight text-[#2F281F] sm:text-4xl">
                           {point.title}
                         </h3>
                         <p className="mt-5 text-base leading-8 text-[#605448] sm:text-lg">
@@ -257,12 +249,7 @@ export function WhyChooseUsSection() {
                 />
               ))}
             </div>
-            <div className="flex items-center justify-between gap-4 lg:justify-end">
-              <p className="text-sm leading-7 text-[#8C7B6D]">
-                Slide {String(activeIndex + 1).padStart(2, "0")} of{" "}
-                {String(trustPoints.length).padStart(2, "0")}
-              </p>
-            </div>
+            <div />
           </div>
         </div>
       </div>

@@ -11,15 +11,12 @@ export function BrandPositioningSection() {
       description="We provide personalized aesthetic and cosmetic treatments focused on natural-looking results, clinical safety, and a premium patient experience."
     >
       <div className="grid gap-4 md:grid-cols-3">
-        {brandPillars.map((pillar, index) => (
+        {brandPillars.map((pillar) => (
           <article
             key={pillar.title}
             className="rounded-[1.75rem] border border-[#E7DDD2] bg-[linear-gradient(180deg,#FFFDFA_0%,#F8F2EC_100%)] p-7 shadow-[0_18px_45px_rgba(58,40,24,0.06)]"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#DCCBBA] bg-white text-sm font-semibold tracking-[0.18em] text-[#8D6B3F]">
-              {`0${index + 1}`}
-            </div>
-            <h3 className="mt-6 text-2xl text-[#2F281F]">{pillar.title}</h3>
+            <h3 className="text-2xl text-[#2F281F]">{pillar.title}</h3>
             <p className="mt-4 text-base leading-8 text-[#605448]">{pillar.description}</p>
             {pillar.image ? (
               <div className="mt-6 overflow-hidden rounded-[1.4rem] border border-[#E7DDD2] bg-[#F1E6DA]">

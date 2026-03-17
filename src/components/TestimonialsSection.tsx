@@ -159,10 +159,7 @@ export function TestimonialsSection() {
                       </div>
 
                       <div className="rounded-[1.9rem] border border-[#EAE0D6] bg-[linear-gradient(180deg,#FFFCF8_0%,#F8F1E8_100%)] p-6 sm:p-7">
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
-                          Review {String(logicalIndex + 1).padStart(2, "0")}
-                        </p>
-                        <p className="mt-5 text-lg leading-8 text-[#3F342A] sm:text-[1.35rem]">
+                        <p className="text-lg leading-8 text-[#3F342A] sm:text-[1.35rem]">
                           &ldquo;{testimonial.quote}&rdquo;
                         </p>
 
@@ -197,10 +194,6 @@ export function TestimonialsSection() {
                 />
               ))}
             </div>
-            <p className="text-sm leading-7 text-[#8C7B6D]">
-              Slide {String(activeIndex + 1).padStart(2, "0")} of{" "}
-              {String(testimonials.length).padStart(2, "0")}
-            </p>
           </div>
         </div>
       </div>

@@ -197,10 +197,7 @@ export function ResultsPreviewSection() {
                       </div>
 
                       <div className="rounded-[1.9rem] border border-[#EAE0D6] bg-[linear-gradient(180deg,#FFFCF8_0%,#F8F1E8_100%)] p-6 sm:p-7">
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.26em] text-[#8D6B3F] sm:text-xs sm:tracking-[0.3em]">
-                          Case {String(logicalIndex + 1).padStart(2, "0")}
-                        </p>
-                        <h3 className="mt-4 text-3xl leading-tight text-[#2F281F] sm:text-4xl">
+                        <h3 className="text-3xl leading-tight text-[#2F281F] sm:text-4xl">
                           {result.title}
                         </h3>
                         <p className="mt-5 text-base leading-8 text-[#605448] sm:text-lg">
@@ -239,11 +236,7 @@ export function ResultsPreviewSection() {
                 />
               ))}
             </div>
-            <div className="flex items-center justify-between gap-4 lg:justify-end">
-              <p className="text-sm leading-7 text-[#8C7B6D]">
-                Slide {String(activeIndex + 1).padStart(2, "0")} of{" "}
-                {String(resultPreviews.length).padStart(2, "0")}
-              </p>
+            <div className="flex items-center justify-end gap-4">
               <ButtonLink href="#contact" variant="secondary">
                 View More Results
               </ButtonLink>
