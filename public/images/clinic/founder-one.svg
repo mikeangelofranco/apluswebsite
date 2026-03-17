@@ -1,0 +1,18 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1200" fill="#DAB68F"/>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <ellipse cx="460" cy="360" rx="160" ry="210" fill="#F0D4B5"/>
+  <path d="M300 350C318 240 390 170 470 170C548 170 618 234 635 338C590 306 514 296 396 312L300 350Z" fill="#744A30"/>
+  <path d="M285 390C285 258 368 164 460 164C552 164 635 262 635 390C635 520 560 612 460 612C360 612 285 520 285 390Z" fill="#F4DDC4"/>
+  <rect x="350" y="390" width="42" height="12" rx="6" fill="#8A5A3B" fill-opacity="0.44"/>
+  <rect x="520" y="390" width="42" height="12" rx="6" fill="#8A5A3B" fill-opacity="0.44"/>
+  <path d="M400 520C440 552 480 552 522 520" stroke="#C78868" stroke-width="10" stroke-linecap="round"/>
+  <rect x="180" y="650" width="560" height="340" rx="180" fill="#845431" fill-opacity="0.78"/>
+  <text x="90" y="1100" fill="#5A3D28" font-family="Georgia, serif" font-size="40">Founder Portrait</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EBC8A2"/>
+      <stop offset="1" stop-color="#B97E4C"/>
+    </linearGradient>
+  </defs>
+</svg>

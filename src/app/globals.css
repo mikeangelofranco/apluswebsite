@@ -1,25 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3f7f3;
-  --foreground: #122025;
-  --surface: #ffffff;
-  --muted: #57707a;
-  --line: #d8e2dd;
-  --brand: #0b8f6a;
-  --accent: #e98d34;
+  --background: #cfa77b;
+  --foreground: #5a3d28;
+  --canvas: #fcfaf7;
+  --cream: #f7f1ea;
+  --warm-beige: #e7d7c7;
+  --muted: #9a8572;
+  --text-body: #6f5846;
+  --text-deep: #4a2f1d;
+  --gold: #b8863b;
+  --gold-deep: #9a6b2f;
+  --gold-light: #d4b07a;
+  --border: #e8ddd1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
+  --color-canvas: var(--canvas);
+  --color-cream: var(--cream);
+  --color-warm-beige: var(--warm-beige);
   --color-muted: var(--muted);
-  --color-line: var(--line);
-  --color-brand: var(--brand);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-space-grotesk);
-  --font-display: var(--font-dm-serif-display);
+  --color-body: var(--text-body);
+  --color-deep: var(--text-deep);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-light: var(--gold-light);
+  --color-border: var(--border);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-playfair-display);
 }
 
 *,
@@ -28,26 +38,47 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100%;
   margin: 0;
-  background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+  background-color: var(--background);
   background-image:
-    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--brand) 18%, transparent), transparent 30%),
-    radial-gradient(circle at 88% 16%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 33%);
-  font-family: var(--font-space-grotesk), sans-serif;
+    radial-gradient(circle at top left, rgba(255, 246, 236, 0.44), transparent 33%),
+    radial-gradient(circle at 85% 14%, rgba(122, 82, 48, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 252, 247, 0.22), transparent 32%),
+    linear-gradient(135deg, #c79b6b 0%, #d2b08c 48%, #c69a6b 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(74, 47, 29, 0.1), transparent 30%),
+    radial-gradient(circle at center, transparent 45%, rgba(74, 47, 29, 0.08) 100%);
 }
 
 h1,
 h2,
-h3 {
-  font-family: var(--font-dm-serif-display), serif;
-  letter-spacing: -0.02em;
+h3,
+h4 {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-playfair-display), serif;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -55,7 +86,49 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ::selection {
-  background: var(--brand);
-  color: #f6fff9;
+  background: rgba(184, 134, 59, 0.88);
+  color: #fffaf4;
+}
+
+@keyframes heroFloat {
+  from {
+    transform: scale(1.02);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmerLine {
+  from {
+    transform: translateX(-20%);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translateX(20%);
+    opacity: 0.9;
+  }
+}
+
+.hero-image-motion {
+  animation: heroFloat 18s ease-in-out infinite alternate;
+}
+
+.shimmer-divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(184, 134, 59, 0.65), transparent);
+  animation: shimmerLine 6s ease-in-out infinite alternate;
 }

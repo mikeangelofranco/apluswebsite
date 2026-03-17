@@ -1,0 +1,17 @@
+<svg width="1200" height="1000" viewBox="0 0 1200 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1000" fill="#D8B28C"/>
+  <rect width="1200" height="1000" fill="url(#bg)"/>
+  <rect x="130" y="220" width="380" height="420" rx="26" fill="#F9F2E9" fill-opacity="0.7"/>
+  <rect x="590" y="330" width="440" height="180" rx="90" fill="#F0D8BE" fill-opacity="0.82"/>
+  <rect x="620" y="560" width="380" height="34" rx="17" fill="#B67B48" fill-opacity="0.72"/>
+  <ellipse cx="1020" cy="210" rx="110" ry="92" fill="#FAF0E4" fill-opacity="0.72"/>
+  <path d="M0 760C220 690 460 680 710 720C900 750 1060 810 1200 900V1000H0V760Z" fill="#7A5230" fill-opacity="0.18"/>
+  <text x="110" y="865" fill="#5A3D28" font-family="Georgia, serif" font-size="46">Reception Area</text>
+  <text x="110" y="915" fill="#7A5230" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">WELCOME  /  DISCRETION  /  WARMTH</text>
+  <defs>
+    <linearGradient id="bg" x1="1200" y1="0" x2="0" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9D0B1"/>
+      <stop offset="1" stop-color="#C28755"/>
+    </linearGradient>
+  </defs>
+</svg>

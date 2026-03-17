@@ -1,0 +1,17 @@
+<svg width="1200" height="1000" viewBox="0 0 1200 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1000" fill="#E5C8AB"/>
+  <rect width="1200" height="1000" fill="url(#bg)"/>
+  <ellipse cx="680" cy="450" rx="330" ry="380" fill="#EBC8A7" fill-opacity="0.84"/>
+  <ellipse cx="770" cy="420" rx="250" ry="300" fill="#F1D9C3" fill-opacity="0.9"/>
+  <ellipse cx="840" cy="350" rx="110" ry="130" fill="#FAEBDD" fill-opacity="0.72"/>
+  <path d="M310 760C420 660 520 600 660 560" stroke="#F7EEE3" stroke-width="18" stroke-linecap="round"/>
+  <path d="M290 610C420 530 560 480 690 470" stroke="#D8AA7B" stroke-width="14" stroke-linecap="round" opacity="0.75"/>
+  <text x="110" y="875" fill="#5A3D28" font-family="Georgia, serif" font-size="46">Skin Close-Up</text>
+  <text x="110" y="925" fill="#7A5230" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">CLARITY  /  TEXTURE  /  RADIANCE</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="30" x2="1050" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1DBC5"/>
+      <stop offset="1" stop-color="#B97E4D"/>
+    </linearGradient>
+  </defs>
+</svg>

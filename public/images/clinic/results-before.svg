@@ -1,0 +1,18 @@
+<svg width="1000" height="1200" viewBox="0 0 1000 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1200" fill="#D7B18B"/>
+  <rect width="1000" height="1200" fill="url(#bg)"/>
+  <ellipse cx="500" cy="400" rx="190" ry="245" fill="#EBC9A8"/>
+  <path d="M335 390C345 280 410 210 505 210C590 210 666 275 673 390C630 345 550 325 425 346L335 390Z" fill="#744A30"/>
+  <path d="M320 430C320 290 404 180 500 180C596 180 680 292 680 430C680 570 590 680 500 680C410 680 320 570 320 430Z" fill="#F2D7BA"/>
+  <rect x="398" y="430" width="54" height="14" rx="7" fill="#88563A" fill-opacity="0.48"/>
+  <rect x="548" y="430" width="54" height="14" rx="7" fill="#88563A" fill-opacity="0.48"/>
+  <path d="M435 560C480 590 520 590 565 560" stroke="#C99171" stroke-width="12" stroke-linecap="round"/>
+  <rect x="210" y="730" width="580" height="250" rx="120" fill="#8E5E39" fill-opacity="0.76"/>
+  <text x="120" y="1075" fill="#5A3D28" font-family="Georgia, serif" font-size="42">Before</text>
+  <defs>
+    <linearGradient id="bg" x1="1000" y1="0" x2="0" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7C5A2"/>
+      <stop offset="1" stop-color="#B67E4D"/>
+    </linearGradient>
+  </defs>
+</svg>

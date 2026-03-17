@@ -1,0 +1,19 @@
+<svg width="1000" height="1200" viewBox="0 0 1000 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="1200" fill="#E0C09D"/>
+  <rect width="1000" height="1200" fill="url(#bg)"/>
+  <ellipse cx="500" cy="395" rx="186" ry="240" fill="#F1D9C3"/>
+  <path d="M340 388C355 272 420 202 504 202C590 202 660 270 678 370C632 332 564 314 450 330L340 388Z" fill="#6C432B"/>
+  <path d="M324 425C324 292 408 188 500 188C592 188 676 292 676 425C676 558 590 664 500 664C410 664 324 560 324 425Z" fill="#F7E4D0"/>
+  <rect x="404" y="430" width="54" height="14" rx="7" fill="#88563A" fill-opacity="0.34"/>
+  <rect x="548" y="430" width="54" height="14" rx="7" fill="#88563A" fill-opacity="0.34"/>
+  <path d="M438 560C480 585 522 585 562 560" stroke="#CE9170" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="630" cy="320" rx="86" ry="110" fill="#FFF6EC" fill-opacity="0.44"/>
+  <rect x="220" y="724" width="560" height="240" rx="120" fill="#8A5934" fill-opacity="0.72"/>
+  <text x="120" y="1075" fill="#5A3D28" font-family="Georgia, serif" font-size="42">After</text>
+  <defs>
+    <linearGradient id="bg" x1="90" y1="60" x2="900" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1D7BD"/>
+      <stop offset="1" stop-color="#C28955"/>
+    </linearGradient>
+  </defs>
+</svg>
